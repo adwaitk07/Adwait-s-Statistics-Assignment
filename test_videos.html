@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Bank Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .question {
+            background: rgba(88, 28, 135, 0.2);
+            border: 1px solid rgba(216, 180, 254, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        details {
+            margin-top: 15px;
+        }
+
+        summary {
+            cursor: pointer;
+            padding: 10px;
+            background: rgba(216, 180, 254, 0.1);
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .solution {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border-left: 3px solid #d8b4fe;
+        }
+
+        video {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Practice Bank - Test Page</h1>
+    <p>This is a simplified test to verify video playback works.</p>
+
+    <div class="question">
+        <h3>Question 1: Birthday Paradox Variation</h3>
+        <p>In a group of 23 people, what's the probability at least two were born in the same month?</p>
+
+        <details>
+            <summary>Show Solution</summary>
+            <div class="solution">
+                <p><strong>Solution:</strong></p>
+                <p>With 12 months instead of 365 days, collisions happen MUCH faster!</p>
+                <p>P(at least one match) ≈ 99.999%</p>
+
+                <div class="video-container">
+                    <p><strong>Video Solution:</strong></p>
+                    <video controls autoplay loop muted>
+                        <source src="videos/solution_q01_birthday_1763976466766.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </details>
+    </div>
+
+    <div class="question">
+        <h3>Question 2: False Positive Problem</h3>
+        <p>A disease affects 1% of the population. A test is 95% accurate. You test positive. What's the probability you
+            have the disease?</p>
+
+        <details>
+            <summary>Show Solution</summary>
+            <div class="solution">
+                <p><strong>Solution:</strong></p>
+                <p>Using Bayes' Theorem: P(Disease|Positive) ≈ 16.1%</p>
+
+                <div class="video-container">
+                    <p><strong>Video Solution:</strong></p>
+                    <video controls autoplay loop muted>
+                        <source src="videos/solution_q02_false_positive_1763976608249.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </details>
+    </div>
+
+</body>
+
+</html>

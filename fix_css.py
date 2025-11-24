@@ -1,4 +1,34 @@
-:root {
+"""
+Fix CSS file by appending video solution styles
+"""
+
+video_css = """
+/* Video Solution Styles */
+.video-solution {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.video-solution p {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.video-solution video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+"""
+
+# Read original CSS from backup (before corruption)
+# Since we don't have the original, we'll recreate it
+original_css = """:root {
     --bg-color: #000000;
     --text-color: #f8fafc;
     --accent-color: #d8b4fe;
@@ -26,8 +56,6 @@
     box-sizing: border-box;
     cursor: none !important;
 }
-
-
 
 body {
     font-family: var(--font-main);
@@ -82,7 +110,7 @@ body {
 .spinner {
     width: 50px;
     height: 50px;
-    border: 3px solid rgba(255, 255, 255, 0.1);
+    border:3px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     border-top-color: var(--accent-color);
     animation: spin 1s ease-in-out infinite;
@@ -569,29 +597,7 @@ summary::-webkit-details-marker {
     margin-bottom: 0.8rem;
 }
 
-
-/* Video Solution Styles */
-.video-solution {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    border-left: 3px solid var(--accent-color);
-}
-
-.video-solution p {
-    margin-bottom: 0.5rem;
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
-.video-solution video {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0.5rem;
-    margin-top: 0.5rem;
-}
-
+""" + video_css + """
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -635,3 +641,10 @@ summary::-webkit-details-marker {
         transform: translateY(0);
     }
 }
+"""
+
+# Write corrected CSS
+with open('style.css', 'w', encoding='utf-8') as f:
+    f.write(original_css)
+
+print("[SUCCESS] CSS file restored and video solution styles added!")

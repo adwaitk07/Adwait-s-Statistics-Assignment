@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Hover effects for cursor
-    const interactiveElements = document.querySelectorAll('a, button, input');
+    const interactiveElements = document.querySelectorAll('a, button, input, summary');
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
